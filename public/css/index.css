@@ -363,13 +363,13 @@ a {
 /* Why us start */
 
 
-.why-us {
+.about-us {
     width: 100%;
     margin-top: 20vh;
 }
 
 
-.why-us .container {
+.about-us .container {
     width: 90%;
     margin: auto;
     display: grid;
@@ -377,11 +377,11 @@ a {
     grid-gap: 6vh;
 }
 
-.why-us .container .image img {
+.about-us .container .image img {
     width: 100%;
 }
 
-.why-us .container .content h2 {
+.about-us .container .content h2 {
     color: #fff;
     font-family: "Gilroy-Bold";
     font-size: var(--font-size-3-);
@@ -389,7 +389,7 @@ a {
 }
 
 
-.why-us .container .content p {
+.about-us .container .content p {
     color: #fff;
     font-family: "Gilroy-regular";
     font-size: var(--font-size-4-);
@@ -397,13 +397,13 @@ a {
     margin-top: 2vh;
 }
 
-.why-us .container .content .icons {
+.about-us .container .content .icons {
     display: flex;
     gap: 2vh;
     margin-top: 2vh;
 }
 
-.why-us .container .content .icons a {
+.about-us .container .content .icons a {
     width: 6vh;
     height: 6vh;
     border-radius: var(--default-radius-);
@@ -418,7 +418,7 @@ a {
     transition: 0.3s ease all;
 }
 
-.why-us .container .content .icons a:hover {
+.about-us .container .content .icons a:hover {
     background: var(--main-color-);
 }
 
@@ -429,25 +429,25 @@ a {
 /* Packages start */
 /* Packages start */
 
-.packages {
+.ranks {
     width: 100%;
     margin-top: 10vh;
 }
 
-.packages .container {
+.ranks .container {
     width: 80%;
     margin: auto;
 
 }
 
-.packages .container h2 {
+.ranks .container h2 {
     text-align: center;
     color: #fff;
     font-family: "gilroy-bold";
     font-size: var(--font-size-2-);
 }
 
-.packages .container .wrapper {
+.ranks .container .wrapper {
     margin-top: 6vh;
     display: flex;
     flex-wrap: wrap;
@@ -455,7 +455,7 @@ a {
     align-items: center;
 }
 
-.packages .container .wrapper .item {
+.ranks .container .wrapper .item {
     flex-basis: 40vh;
     flex-grow: 1;
     padding: 3vh;
@@ -467,25 +467,25 @@ a {
 
 }
 
-.packages .container .wrapper .item.active {
+.ranks .container .wrapper .item.active {
     background-color: var(--main-color-);
 }
 
-.packages .container .wrapper .item .title {
+.ranks .container .wrapper .item .title {
     font-family: "gilroy-bold";
     color: var(--white-);
     font-size: var(--font-size-3-);
 }
 
 
-.packages .container .wrapper .item .text {
+.ranks .container .wrapper .item .text {
     font-family: "gilroy-medium";
     color: var(--text-color-);
     font-size: var(--font-size-5-);
     margin-top: 1vh;
 }
 
-.packages .container .wrapper .item .price {
+.ranks .container .wrapper .item .price {
     font-family: "gilroy-medium";
     color: var(--white-);
     font-size: var(--font-size-2-);
@@ -493,12 +493,12 @@ a {
     font-weight: 800;
 }
 
-.packages .container .wrapper .item .price span {
+.ranks .container .wrapper .item .price span {
     color: var(--text-color-);
     font-size: var(--font-size-5-);
 }
 
-.packages .container .wrapper .item .article {
+.ranks .container .wrapper .item .article {
     display: flex;
     align-items: top;
     justify-content: left;
@@ -510,16 +510,16 @@ a {
 }
 
 
-.packages .container .wrapper .item .article.first {
+.ranks .container .wrapper .item .article.first {
     margin-top: 4vh;
 }
 
-.packages .container .wrapper .item .article i {
+.ranks .container .wrapper .item .article i {
     margin-top: 0.3vh;
 }
 
 
-.packages .container .wrapper .item .btn {
+.ranks .container .wrapper .item .btn {
     display: block;
     width: 100%;
     height: 6vh;
@@ -535,7 +535,7 @@ a {
     color: var(--main-color-);
 }
 
-.packages .container .wrapper .item .btn:hover {
+.ranks .container .wrapper .item .btn:hover {
     opacity: 0.5;
 }
 
