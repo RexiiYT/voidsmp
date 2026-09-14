@@ -1,0 +1,795 @@
+/* Codpat © 2025 | www.codpat.com */
+
+@import url("root.css");
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: var(--bg-color-);
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.bg {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    background-image: url("../images/bg-image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    opacity: 0.2;
+}
+
+.bg::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 3;
+    background: linear-gradient(#00000000, var(--bg-color-));
+}
+
+
+/* Header start */
+/* Header start */
+/* Header start */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    z-index: 4;
+    transform: translateY(-10vh);
+    transition: 0.3s ease all;
+}
+
+
+
+.header.active {
+    background: var(--bg-color-);
+    transform: translateY(0);
+}
+
+.header.transparent {
+    background: transparent;
+}
+
+.header .nav {
+    width: 90%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.header .nav .left {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 10vh;
+}
+
+.header .nav .left .logo {
+    width: 16vh;
+
+}
+
+.header .nav .left .logo img {
+    width: 100%;
+}
+
+.header .nav .left .menu {
+    display: flex;
+    align-items: center;
+    gap: 10vh;
+
+}
+
+
+.header .nav .left .menu a {
+    font-family: Gilroy-Bold;
+    color: var(--white-);
+    font-size: var(--font-size-4-);
+    transition: 0.3s ease all;
+    width: max-content;
+}
+
+.header .nav .left .menu a:hover {
+    color: var(--main-color-);
+}
+
+
+.header .nav .right .join-btn {
+    padding: 1vh 4vh;
+    background: var(--main-color20-);
+    border: 0.1vh solid var(--main-color-);
+    border-radius: var(--default-radius-);
+    color: var(--white-);
+    font-family: Gilroy-Bold;
+    font-size: var(--font-size-5-);
+    transition: 0.3s ease all;
+    display: block;
+    width: max-content;
+}
+
+.header .nav .right .join-btn:hover {
+    background: var(--main-color-);
+}
+
+
+
+
+.mobile-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    background-color: var(--bg-color-);
+    z-index: 4;
+    display: none;
+}
+
+.mobile-header .nav {
+    position: relative;
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.mobile-header .nav .left {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 10vh;
+}
+
+.mobile-header .nav .left .logo {
+    width: 16vh;
+}
+
+.mobile-header .nav .left .logo img {
+    width: 100%;
+}
+
+.mobile-header .nav .right {
+    display: flex;
+    gap: 2vh;
+}
+
+.mobile-header .nav .menu-btn {
+    position: relative;
+    width: 4.5vh;
+    height: 4.5vh;
+    background: var(--main-color-);
+    border-radius: var(--default-radius-);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4vh;
+    overflow: hidden;
+}
+
+.mobile-header .nav .menu-btn::before {
+    position: absolute;
+    content: "";
+    top: 1.4vh;
+    width: 2vh;
+    height: 0.6vh;
+    background-color: var(--white-);
+    border-radius: var(--default-radius-);
+    transition: 0.3s ease all;
+}
+
+.mobile-header .nav .menu-btn::after {
+    position: absolute;
+    content: "";
+    bottom: 1.4vh;
+    width: 2vh;
+    height: 0.6vh;
+    background-color: var(--white-);
+    transition: 0.3s ease all;
+    border-radius: var(--default-radius-);
+}
+
+.mobile-header .nav .menu-btn.active::before {
+    transform: translateY(0.6vh);
+}
+
+.mobile-header .nav .menu-btn.active::after {
+    transform: translateY(4vh);
+}
+
+
+
+.mobile-header .nav .menu {
+    position: absolute;
+    left: 0vh;
+    top: 12vh;
+    display: flex;
+    width: 100%;
+    max-height: 0;
+    gap: 4vh;
+    flex-direction: column;
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: var(--default-radius-);
+    background: var(--bg-color-);
+    overflow: hidden;
+    border: none;
+    transition: 0.3s ease all;
+}
+
+.mobile-header .nav .menu.active {
+    padding: 4vh;
+    max-height: 50vh;
+    border: 0.1vh solid var(--main-color50-);
+
+}
+
+
+.mobile-header .menu a {
+    font-family: Gilroy-Bold;
+    color: var(--white-);
+    font-size: var(--font-size-4);
+    transition: 0.3s ease all;
+}
+
+.mobile-header .menu a:hover {
+    color: var(--main-color-);
+}
+
+
+.mobile-header .nav .right .join-btn {
+    padding: 1vh 4vh;
+    background: var(--main-color20-);
+    border: 0.1vh solid var(--main-color-);
+    border-radius: var(--default-radius-);
+    color: var(--white-);
+    font-family: Gilroy-Bold;
+    font-size: var(--font-size-5);
+    transition: 0.3s ease all;
+    width: max-content;
+}
+
+.mobile-header .nav .right .join-btn:hover {
+    background: var(--main-color-);
+}
+
+/* Hero start */
+/* Hero start */
+/* Hero start */
+
+
+.hero {
+    width: 100%;
+    margin-top: 20vh;
+}
+
+
+.hero .container {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+.hero .container .content h1 {
+    color: var(--white-);
+    -webkit-text-stroke: 0.2vh var(--main-color-);
+    font-weight: 300;
+    font-family: "Odibee Sans";
+    font-size: var(--font-size-1-);
+    line-height: 16vh;
+}
+
+.hero .container .content p {
+    font-family: Gilroy-Regular;
+    color: var(--text-color-);
+    font-size: var(--font-size-4-);
+    line-height: var(--pc-text-line-height-);
+    margin-top: 1vh;
+}
+
+.hero .container .content .btns {
+    display: flex;
+    gap: 2vh;
+    margin-top: 4vh;
+}
+
+.hero .container .content .btns .btn {
+    padding: 2vh 6vh;
+    background-color: var(--white10-);
+    color: var(--white-);
+    border-radius: var(--default-radius-);
+    cursor: pointer;
+    transition: 0.3s ease all;
+    font-family: Gilroy-Bold;
+    font-size: var(--font-size-4);
+}
+
+.hero .container .content .btns .btn:hover {
+    opacity: 0.5;
+
+}
+
+.hero .container .content .btns .btn.purple {
+    background: linear-gradient(150deg, var(--main-linear-color-));
+}
+
+
+.hero .container .image {
+    justify-self: end;
+}
+
+.hero .container .image img {
+    width: 60vh;
+    animation: dragon-animation 6s infinite alternate;
+}
+
+
+
+/* Why us start */
+/* Why us start */
+/* Why us start */
+
+
+.why-us {
+    width: 100%;
+    margin-top: 20vh;
+}
+
+
+.why-us .container {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 6vh;
+}
+
+.why-us .container .image img {
+    width: 100%;
+}
+
+.why-us .container .content h2 {
+    color: #fff;
+    font-family: "Gilroy-Bold";
+    font-size: var(--font-size-3-);
+    margin-top: 3vh;
+}
+
+
+.why-us .container .content p {
+    color: #fff;
+    font-family: "Gilroy-regular";
+    font-size: var(--font-size-4-);
+    line-height: var(--pc-text-line-height-);
+    margin-top: 2vh;
+}
+
+.why-us .container .content .icons {
+    display: flex;
+    gap: 2vh;
+    margin-top: 2vh;
+}
+
+.why-us .container .content .icons a {
+    width: 6vh;
+    height: 6vh;
+    border-radius: var(--default-radius-);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--main-color20-);
+    border: 0.1vh solid var(--main-color-);
+    border-radius: var(--default-radius-);
+    color: var(--white-);
+    font-size: var(--font-size-4-);
+    transition: 0.3s ease all;
+}
+
+.why-us .container .content .icons a:hover {
+    background: var(--main-color-);
+}
+
+
+
+
+/* Packages start */
+/* Packages start */
+/* Packages start */
+
+.packages {
+    width: 100%;
+    margin-top: 10vh;
+}
+
+.packages .container {
+    width: 80%;
+    margin: auto;
+
+}
+
+.packages .container h2 {
+    text-align: center;
+    color: #fff;
+    font-family: "gilroy-bold";
+    font-size: var(--font-size-2-);
+}
+
+.packages .container .wrapper {
+    margin-top: 6vh;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4vh;
+    align-items: center;
+}
+
+.packages .container .wrapper .item {
+    flex-basis: 40vh;
+    flex-grow: 1;
+    padding: 3vh;
+    background-color: transparent;
+    border: 0.1vh solid var(--white40-);
+    border-radius: var(--default-radius-);
+    height: max-content;
+    box-sizing: border-box;
+
+}
+
+.packages .container .wrapper .item.active {
+    background-color: var(--main-color-);
+}
+
+.packages .container .wrapper .item .title {
+    font-family: "gilroy-bold";
+    color: var(--white-);
+    font-size: var(--font-size-3-);
+}
+
+
+.packages .container .wrapper .item .text {
+    font-family: "gilroy-medium";
+    color: var(--text-color-);
+    font-size: var(--font-size-5-);
+    margin-top: 1vh;
+}
+
+.packages .container .wrapper .item .price {
+    font-family: "gilroy-medium";
+    color: var(--white-);
+    font-size: var(--font-size-2-);
+    margin-top: 2vh;
+    font-weight: 800;
+}
+
+.packages .container .wrapper .item .price span {
+    color: var(--text-color-);
+    font-size: var(--font-size-5-);
+}
+
+.packages .container .wrapper .item .article {
+    display: flex;
+    align-items: top;
+    justify-content: left;
+    gap: 1vh;
+    margin-top: 2vh;
+    font-family: "gilroy-medium";
+    color: var(--white-);
+    font-size: var(--font-size-4-);
+}
+
+
+.packages .container .wrapper .item .article.first {
+    margin-top: 4vh;
+}
+
+.packages .container .wrapper .item .article i {
+    margin-top: 0.3vh;
+}
+
+
+.packages .container .wrapper .item .btn {
+    display: block;
+    width: 100%;
+    height: 6vh;
+    margin-top: 4vh;
+    background-color: var(--white-);
+    border-radius: var(--default-radius-);
+    display: flex;
+    align-items: center;
+    font-family: "gilroy-medium";
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s ease all;
+    color: var(--main-color-);
+}
+
+.packages .container .wrapper .item .btn:hover {
+    opacity: 0.5;
+}
+
+
+
+/* Feedbacks Start */
+/* Feedbacks Start */
+/* Feedbacks Start */
+
+.feedbacks {
+    width: 100%;
+    margin-top: 20vh;
+}
+
+.feedbacks .container {
+    width: 80%;
+    margin: auto;
+
+}
+
+.feedbacks .container h2 {
+    text-align: left;
+    color: #fff;
+    font-family: "gilroy-bold";
+    font-size: var(--font-size-2-);
+}
+
+.feedbacks .container .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vh;
+    margin-top: 6vh;
+}
+
+.feedbacks .container .wrapper .item {
+    padding: 3vh;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 0.1vh solid var(--white40-);
+    border-radius: var(--default-radius-);
+    flex-basis: 30vh;
+    flex-grow: 1;
+    transition: 0.3s ease all;
+}
+
+.feedbacks .container .wrapper .item:hover {
+    background: var(--main-color-);
+}
+
+.feedbacks .container .wrapper .item .info {
+    display: flex;
+    gap: 2vh;
+    align-items: center;
+}
+
+.feedbacks .container .wrapper .item .info .name {
+    color: var(--white-);
+    font-family: "Gilroy-Medium";
+    font-size: var(--font-size-4-);
+}
+
+
+.feedbacks .container .wrapper .item .info .tag {
+    color: var(--white-);
+    font-family: "Gilroy-bold";
+    font-size: var(--font-size-4-);
+    margin-top: 0.4vh;
+}
+
+.feedbacks .container .wrapper .item .text {
+    color: var(--text-color-);
+    font-family: "Gilroy-regular";
+    font-size: var(--font-size-5-);
+    margin-top: 2vh;
+    line-height: 3vh;
+}
+
+.feedbacks .container .wrapper .item:hover .text {
+    color: var(--white-);
+}
+
+
+/* Free Support Start */
+/* Free Support Start */
+/* Free Support Start */
+
+.free-support {
+    width: 100%;
+    margin-top: 20vh;
+}
+
+.free-support .container {
+    width: 60%;
+    position: relative;
+    margin: auto;
+    padding: 10vh 26vh;
+    box-sizing: border-box;
+    border-radius: var(--default-radius-);
+    text-align: center;
+    overflow: hidden;
+    border: 0.1vh solid var(--main-color-);
+}
+
+.free-support .support-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    opacity: 0.2;
+    z-index: -2;
+}
+
+.free-support .container h2 {
+    color: var(--white-);
+    font-family: "gilroy-bold";
+    font-size: var(--font-size-2-);
+}
+
+.free-support .container p {
+    font-family: "gilroy-regular";
+    font-size: var(--font-size-4-);
+    color: var(--white-);
+    text-align: center;
+    margin-top: 2vh;
+}
+
+.free-support .container .items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3vh;
+    margin-top: 4vh;
+}
+
+
+.free-support .container .items .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vh;
+    font-family: "gilroy-medium";
+    color: #fff;
+}
+
+.free-support .container .items .item .icon-box {
+    width: 4vh;
+    height: 4vh;
+    background-color: var(--main-color-);
+    border-radius: var(--default-radius-);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.free-support .container .btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+    margin-top: 8vh;
+}
+
+.free-support .container .btns .btn {
+    border: 0.1vh solid var(--main-color-);
+    font-family: "gilroy-bold";
+    color: var(--white-);
+    font-size: var(--font-size-4-);
+    background: var(--main-color-);
+    padding: 2vh 6vh;
+    border-radius: var(--default-radius-);
+    cursor: pointer;
+    transition: 0.3s ease all;
+}
+
+
+.free-support .container .btns .btn:hover {
+    opacity: 0.5;
+}
+
+.free-support .container .btns .btn:nth-child(2) {
+    background-color: var(--main-color50-);
+}
+
+.free-support .container .btns .btn:nth-child(2):hover {
+    background-color: var(--main-color-);
+    opacity: 1;
+
+}
+
+
+/* Footer Start */
+/* Footer Start */
+/* Footer Start */
+
+
+.footer {
+    width: 100%;
+    margin-top: 20vh;
+}
+
+.footer .container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.footer .container .logo {
+    width: 16vh;
+
+}
+
+.footer .container .menu {
+    display: flex;
+    align-items: center;
+    gap: 4vh;
+}
+
+.footer .container .menu a {
+    color: var(--white-);
+    font-family: "gilroy-regular";
+    font-size: var(--font-size-4-);
+}
+
+.footer .container .menu a:hover {
+    text-decoration: underline;
+}
+
+.codpat-footer {
+    width: 100%;
+    margin-bottom: 4vh;
+}
+
+.codpat-footer .container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--white10-);
+    padding: 2vh 6vh;
+    box-sizing: border-box;
+    border-radius: var(--default-radius-);
+    margin-top: 2vh;
+    color: var(--white-);
+    font-family: "gilroy-regular";
+}
+
+.codpat-footer .container .codpat a {
+    text-decoration: underline;
+    font-family: "gilroy-bold";
+    color: #fff;
+}

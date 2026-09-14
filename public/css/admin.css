@@ -1,0 +1,38 @@
+/* This is your admin panel stylesheet. 
+   You can customize  here. */
+
+
+:root {
+
+    /*  COLOR */
+
+    --main-color-: #962FFE;
+    --main-linear-color-: #962FFE, #8744BE, #43347A;
+    --main-color50-: #962FFE50;
+    --main-color20-: #962FFE20;
+    --bg-color-: #2A2030;
+    --white-: #ffffff;
+    --white10-: #ffffff10;
+    --white40-: #ffffff10;
+    --text-color-: #cbcbcb;
+
+
+    /*  FONT SIZE */
+
+    --font-size-1-: 16vh;
+    --font-size-2-: 4vh;
+    --font-size-3-: 3vh;
+    --font-size-4-: 2vh;
+    --font-size-5-: 1.8vh;
+
+
+    /*  LINE HEIGHT */
+
+    --pc-text-line-height-: 4vh;
+
+
+    /*  BORDER RADIUS */
+
+    --default-radius-: 1vh;
+}
+
