@@ -1,5 +1,5 @@
 import type { Request, Response } from "express";
-import { createApp } from "../server/_core/index";
+import { createApp } from "./_core/index";
 
 let appPromise: ReturnType<typeof createApp> | undefined;
 
